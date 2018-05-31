@@ -9,7 +9,10 @@
     "react-router": "^2.0.0",
     "react-redux": "latest",
     "redux": "latest",
-    "react-router-reduindx": "latest"
+    "react-router-reduindx": "latest",
+    "react-sticky-header": "latest",
+    "@material-ui/core": "latest",
+    "@material-ui/icons": "latest"
   },
   "scripts": {
     "start": "react-scripts start",

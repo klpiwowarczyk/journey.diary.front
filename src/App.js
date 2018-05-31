@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import * as reducers from './reducers';
+import Header from './routes/menu/Header';
 
 
 class App extends Component {
@@ -12,11 +13,8 @@ class App extends Component {
       render() {
           console.log(this.props.posts);
         return (
-          <div className="App">
-            <header className="App-header">
-              <img src={logo} className="App-logo" alt="logo" />
-              <h1 className="App-title"> Tu będzie jakieś menu </h1>
-            </header>
+          <div className="App container-fluid">
+            <Header />
               {this.props.children}
           </div>
         );
