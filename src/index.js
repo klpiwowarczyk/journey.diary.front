@@ -11,6 +11,7 @@ import {routerMiddleware} from "react-router-redux";
 import {Provider} from "react-redux";
 import thunkMiddleware from 'redux-thunk';
 import reducers from './reducers';
+import 'react-sticky-header/styles.css';
 
 const middleware = routerMiddleware(hashHistory);
 const store = createStore(
@@ -24,9 +25,9 @@ const store = createStore(
 ReactDOM.render(
     <Provider store={store}>
         <Router history={hashHistory}>
-            <Route path="/" component={AppContainer}>
+            <Route  component={AppContainer}>
                 <Route path="/postsList" component={PostsListContainer}/>
-                <Route path="/dashboard" component={Page}/>
+                <Route path="/" component={Page}/>
             </Route>
         </Router>
     </Provider>

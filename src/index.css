@@ -3,3 +3,10 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.Header_root {
+  background: #ffffff;
+  padding: 10px 10px;
+  box-shadow: 0 0 5px 0 #888888;
+  font-family: 'Pacifico', cursive;
+}
