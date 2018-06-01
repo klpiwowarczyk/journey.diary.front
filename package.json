@@ -9,7 +9,9 @@
     "react-router": "^2.0.0",
     "react-redux": "latest",
     "redux": "latest",
-    "react-router-reduindx": "latest"
+    "firebase": "latest",
+    "react-router-redux": "latest",
+    "redux-thunk": "latest"
   },
   "scripts": {
     "start": "react-scripts start",
