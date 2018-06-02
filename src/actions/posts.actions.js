@@ -28,8 +28,6 @@ function getPosts() {
 }
 
 function addPost(userName, img, location, description, rate) {
-    console.log('addpost sie wykonuje');
-
     return (dispatch) => {
         const postData = {
             username: userName,
@@ -49,7 +47,6 @@ function addPost(userName, img, location, description, rate) {
         });
 
         return firebase.database().ref().update(updates);
-
     };
 
 }

@@ -26,3 +26,39 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.post {
+  border: 1px solid grey;
+  padding: 10px;
+  margin: 0 300px 20px;
+}
+
+.location {
+  color: grey;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.user {
+  font-size: 15px;
+}
+
+.postImg {
+  height: auto;
+  border: 1px solid black;
+  margin: 20px 0 20px;
+}
+
+.postImg > img {
+  width: 100%;
+}
+
+.like {
+  font-size: 12px;
+  text-align: right;
+}
+
+.likeLabel {
+  font-size: 12px;
+  text-align: left;
+}
