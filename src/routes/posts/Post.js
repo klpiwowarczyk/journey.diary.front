@@ -3,7 +3,6 @@ import React from 'react';
 class Post extends React.Component {
     render() {
         const {post} = this.props;
-        console.log('post',post);
         return(
             <div className='post'>
                 <div className='row user'>

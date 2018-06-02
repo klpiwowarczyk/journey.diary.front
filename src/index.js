@@ -26,8 +26,8 @@ ReactDOM.render(
     <Provider store={store}>
         <Router history={hashHistory}>
             <Route  component={AppContainer}>
-                <Route path="/postsList" component={PostsListContainer}/>
-                <Route path="/" component={Page}/>
+                <Route path="/" component={PostsListContainer}/>
+               {/* <Route path="/" component={Page}/>*/}
             </Route>
         </Router>
     </Provider>

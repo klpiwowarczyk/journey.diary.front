@@ -11,7 +11,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return{
         getPosts: () => dispatch(postsActions.getPosts()),
-        addPost: (userName, img, location, description, rate) => dispatch(postsActions.addPost(userName, img, location, description, rate))
+        addPost: (post) => dispatch(postsActions.addPost(post))
     }
 };
 

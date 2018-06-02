@@ -16,9 +16,7 @@ const database = firebase.database();
 function getPosts() {
     return (dispatch) => {
         const typeRef = database.ref(`/posts/`);
-        console.log('typeRef', typeRef);
         typeRef.on('value', function(snapshot) {
-            console.log('snapshot', snapshot.val());
             dispatch({
                 type: postsActionTypes.GET_POSTS,
                 posts: snapshot.val()
@@ -27,14 +25,14 @@ function getPosts() {
     }
 }
 
-function addPost(userName, img, location, description, rate) {
+function addPost(post) {
     return (dispatch) => {
         const postData = {
-            username: userName,
-            img: img,
-            location: location,
-            description: description,
-            rate: rate
+            username: post.userName,
+            img: post.img,
+            location: post.location,
+            description: post.description,
+            rate: post.rate
         };
 
         const newPostKey = firebase.database().ref().child('posts').push().key;

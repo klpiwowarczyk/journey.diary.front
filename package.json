@@ -14,7 +14,8 @@
     "@material-ui/core": "latest",
     "@material-ui/icons": "latest",
     "react-router-redux": "latest",
-    "firebase": "latest"
+    "firebase": "latest",
+    "react-file-reader-input": "latest"
   },
   "scripts": {
     "start": "react-scripts start",
