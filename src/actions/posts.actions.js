@@ -2,12 +2,12 @@ import {postsActionTypes} from "../constants/ActionTypes";
 import * as firebase from "firebase";
 
 const config = {
-    apiKey: "AIzaSyBHYP5VZPmBnGbLIhU-ntrFzQPHsPUJWNo",
-    authDomain: "journey-diary-project.firebaseapp.com",
-    databaseURL: "https://journey-diary-project.firebaseio.com",
-    projectId: "journey-diary-project",
-    storageBucket: "journey-diary-project.appspot.com",
-    messagingSenderId: "93124094359"
+    apiKey: "AIzaSyB2FvMjCFCcwRBCsNITb3HWqQBQC8UlTfY",
+    authDomain: "journey-diary-sbd.firebaseapp.com",
+    databaseURL: "https://journey-diary-sbd.firebaseio.com",
+    projectId: "journey-diary-sbd",
+    storageBucket: "",
+    messagingSenderId: "543993783624"
 };
 firebase.initializeApp(config);
 
@@ -27,6 +27,34 @@ function getPosts() {
     }
 }
 
+function addPost(userName, img, location, description, rate) {
+    console.log('addpost sie wykonuje');
+
+    return (dispatch) => {
+        const postData = {
+            username: userName,
+            img: img,
+            location: location,
+            description: description,
+            rate: rate
+        };
+
+        const newPostKey = firebase.database().ref().child('posts').push().key;
+        let updates = {};
+        updates['/posts/' + newPostKey] = postData;
+
+        dispatch({
+            type: postsActionTypes.ADD_POST,
+            postData: postData
+        });
+
+        return firebase.database().ref().update(updates);
+
+    };
+
+}
+
 export const postsActions = {
-  getPosts
+  getPosts,
+  addPost
 };

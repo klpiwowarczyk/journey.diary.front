@@ -26,7 +26,7 @@ class Header extends React.Component{
             >
                 <section>
                     <p>
-                       <img style={imgStyle} src={window.location.origin + '/img/tlo2.jpg'} />
+                       <img style={imgStyle} src={window.location.origin + '/img/tlo2.jpg'} alt='Brak zdjęcia' />
 
                     </p>
                 </section>

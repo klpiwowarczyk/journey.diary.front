@@ -10,6 +10,11 @@ const posts = (state = initialState, action) => {
           return {
               ...state,
               posts: action.posts
+          };
+      case postsActionTypes.ADD_POST:
+          return {
+              ...state,
+              posts: [].concat(action.postData)
           }
   }
 
