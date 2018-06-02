@@ -1,6 +1,6 @@
 import React from 'react';
-import 'react-sticky-header/styles.css';
 import StickyHeader from 'react-sticky-header';
+import './../../App.css';
 
 const imgStyle = {
     width: '100%'
@@ -14,13 +14,14 @@ class Header extends React.Component{
             <StickyHeader
                 header={
                     <div className="Header_root">
-                        <h1 className="Header_title">Journey Diary</h1>
+                        <div className='row'>
+                            <h1 className="Header_title col-md-10">Journey Diary</h1>
 
-                       {/* <ul className="Header_links">
-                            <li className="Header_link">When</li>
-                            <li className="Header_link">Why</li>
-                            <li className="Header_link">About</li>
-                        </ul>*/}
+                            <button type="button" className="btn btn-primary col-md-1 buttonAdd" data-toggle="modal" data-target="#myModal">
+                                Dodaj
+                            </button>
+                        </div>
+
                     </div>
                 }
             >

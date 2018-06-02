@@ -1,6 +1,6 @@
 import React from 'react';
-import AddPostContainer from './AddPostContainer';
 import Post from './Post';
+import AddPostModalContainer from "./AddPostModalContainer";
 
 class PostsList extends React.Component {
     componentDidMount() {
@@ -11,6 +11,7 @@ class PostsList extends React.Component {
         const {posts} = this.props;
         return (
             <div>
+                <AddPostModalContainer />
                 {posts && Object.values(posts).map((post, key) => (
                     <Post key={key} post={post} />
                 ))}

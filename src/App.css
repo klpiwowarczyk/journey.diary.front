@@ -62,3 +62,52 @@
   font-size: 12px;
   text-align: left;
 }
+
+.Header_root {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+.Header_root * {
+  box-sizing: border-box;
+}
+.Header_fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 60;
+}
+.Header_background,
+.Header_foreground,
+.Header_midground,
+.Header_background-bg {
+  background-position: center top;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 30;
+}
+.Header_midground {
+  position: fixed;
+  z-index: 20;
+  transform: translateY(-100%);
+}
+.Header_background-bg {
+  z-index: 10;
+}
+
+.Header_title {
+  text-align: left;
+}
+
+.buttonAdd {
+  height: 40px;
+  margin-top: 10px;
+  float: right;
+}
+
+.inputDescription {
+  height: 100%;
+}

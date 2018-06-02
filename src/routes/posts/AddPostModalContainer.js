@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import {postsActions} from "../../actions/posts.actions";
-import AddPost from './AddPost';
+import AddPostModal from './AddPostModal';
 
 const mapStateToProps = (state) => {
     return{
@@ -15,4 +15,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(AddPost);
+export default connect(mapStateToProps, mapDispatchToProps)(AddPostModal);
