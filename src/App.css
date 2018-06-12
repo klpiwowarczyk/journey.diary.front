@@ -28,19 +28,28 @@
 }
 
 .post {
-  border: 1px solid grey;
-  padding: 10px;
-  margin: 0 300px 20px;
+  margin-bottom: 20px;
+
 }
 
 .location {
-  color: grey;
-  font-size: 13px;
-  font-weight: 700;
+
+  font-family: Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;
+	font-size: 16px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px
 }
 
 .user {
-  font-size: 15px;
+  font-family: Rockwell Extra Bold, Rockwell Bold, monospace;
+	font-size: 23px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+  line-height: 26.4px;
+  color: rgb(83, 78, 81);
 }
 
 .postImg {
@@ -55,7 +64,7 @@
 
 .like {
   font-size: 12px;
-  text-align: right;
+  text-alipostgn: right;
 }
 
 .likeLabel {
@@ -110,4 +119,22 @@
 
 .inputDescription {
   height: 100%;
+}
+.fill{
+  width: 100%!important;
+}
+
+.likesF{
+  float: right;
+}
+
+.description{
+  margin-bottom: 20px;
+  margin-top: 25px;
+  
+}
+
+.marginT{
+  margin-top: 70px;
+  margin-bottom: 40px;
 }

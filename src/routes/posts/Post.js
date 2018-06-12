@@ -3,39 +3,29 @@ import React from 'react';
 class Post extends React.Component {
     render() {
         const {post} = this.props;
-        return(
-            <div className='post'>
+        return( 
+            <div className='post container-fluid col-xl-8 border-bottom'>
                 <div className='row user'>
-                    <div className='col-md-4'>
-                        Użytkownik: {post.username}
-                    </div>
+                          {post.username} 
+                        <div className = "likesF container-fluid">
+                            <div className='likeLabel'>
+                                <b> Liczba polubień: {post.rate} </b>
+                            </div>
+                        </div>  
                 </div>
 
                 <div className='row location'>
-                    <div className='col-md-4'>
-                        Lokalizacja: {post.location}
-                    </div>
+                        {post.location}
+                          
                 </div>
-                <div className='row'>
-                    <div className='postImg'>
-                        <img src={`${window.location.origin}/img/${post.img}`} alt='brak zdjęcia' />
-                    </div>
+                <div className = "row">
+                    <img src={`${window.location.origin}/img/${post.img}`}  className = "fill img-responsive "  alt='brak zdjęcia' />
                 </div>
-                <div className='row'>
-                    <div className='col-md-3 likeLabel'>
-                        <b> Liczba polubień: </b>
-                    </div>
-                    <div className='col-md-1 like'>
-                        <b>{post.rate} </b>
-                    </div>
-                </div>
-                <div className='row'>
-                    <div className='col-md-8'>
+
+                <div className='container-fluid col-xl-11'>
+                    <div className='description'>
                         {post.description}
                     </div>
-                </div>
-                <div className='row'>
-
                 </div>
             </div>
         );

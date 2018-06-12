@@ -7,9 +7,10 @@ import registerServiceWorker from './registerServiceWorker';
 import { Router, Route, hashHistory } from 'react-router';
 import PostsListContainer from './routes/posts/PostsListContainer';
 import {applyMiddleware, createStore} from "redux";
+import thunkMiddleware from 'redux-thunk';
 import {routerMiddleware} from "react-router-redux";
 import {Provider} from "react-redux";
-import thunkMiddleware from 'redux-thunk';
+
 import reducers from './reducers';
 import 'react-sticky-header/styles.css';
 
@@ -17,7 +18,7 @@ const middleware = routerMiddleware(hashHistory);
 const store = createStore(
     reducers,
     applyMiddleware(
-        thunkMiddleware,
+	thunkMiddleware,
         middleware
     )
 );

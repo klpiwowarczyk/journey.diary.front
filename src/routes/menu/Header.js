@@ -15,9 +15,9 @@ class Header extends React.Component{
                 header={
                     <div className="Header_root">
                         <div className='row'>
-                            <h1 className="Header_title col-md-10">Journey Diary</h1>
+                            <h1 className="Header_title col-md-11">Journey Diary</h1>
 
-                            <button type="button" className="btn btn-primary col-md-1 buttonAdd" data-toggle="modal" data-target="#myModal">
+                            <button type="button" className="btn btn-primary  buttonAdd" data-toggle="modal" data-target="#myModal">
                                 Dodaj
                             </button>
                         </div>
@@ -26,9 +26,7 @@ class Header extends React.Component{
                 }
             >
                 <section>
-                    <p>
-                       <img style={imgStyle} src={`${window.location.origin}/img/tlo2.jpg`} alt='Brak zdjęcia' />
-                    </p>
+                       <img style={imgStyle} src={`${window.location.origin}/img/tlo2.jpg`} className = "marginT img-responsive" alt='Brak zdjęcia' />
                 </section>
             </StickyHeader>
             </div>
